@@ -4,10 +4,10 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/tutoMonogame/tutoMonogame/Content/crosshairs.png</File>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/tutoMonogame/tutoMonogame/Content/galleryFont.spritefont</File>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/tutoMonogame/tutoMonogame/Content/sky.png</File>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/tutoMonogame/tutoMonogame/Content/target.png</File>
+    <File>C:/Users/gregou.pn/Documents/GitHub/tutoMonogame/tutoMonogame/tutoMonogame/Content/crosshairs.png</File>
+    <File>C:/Users/gregou.pn/Documents/GitHub/tutoMonogame/tutoMonogame/tutoMonogame/Content/galleryFont.spritefont</File>
+    <File>C:/Users/gregou.pn/Documents/GitHub/tutoMonogame/tutoMonogame/tutoMonogame/Content/sky.png</File>
+    <File>C:/Users/gregou.pn/Documents/GitHub/tutoMonogame/tutoMonogame/tutoMonogame/Content/target.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
