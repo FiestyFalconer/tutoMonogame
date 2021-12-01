@@ -4,14 +4,36 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/background.jpg</File>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/frame0.png</File>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/frame1.png</File>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/frame2.png</File>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/idleMario.png</File>
-    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/runMario.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/background.jpg</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/frame0Left.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/frame0Right.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/frame1Left.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/frame1Right.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/frame2Left.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/frame2Right.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/idleMarioLeft.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/idleMarioRight.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/jumpMarioLeft.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/../../../../../../Desktop/imgMario/jumpMarioRight.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/bolckFrame0.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/bolckFrame1.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/bolckFrame2.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/bolckFrame3.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/bolckFrame4.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/questionBlock.png</File>
   </SourceFiles>
   <DestFiles>
+    <File>background.jpg</File>
+    <File>frame0Left.png</File>
+    <File>frame0Right.png</File>
+    <File>frame1Left.png</File>
+    <File>frame1Right.png</File>
+    <File>frame2Left.png</File>
+    <File>frame2Right.png</File>
+    <File>idleMarioLeft.png</File>
+    <File>idleMarioRight.png</File>
+    <File>jumpMarioLeft.png</File>
+    <File>jumpMarioRight.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
