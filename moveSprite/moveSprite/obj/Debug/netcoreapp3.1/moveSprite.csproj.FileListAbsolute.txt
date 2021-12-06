@@ -38,3 +38,11 @@ C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\D
 C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\bolckFrame2.xnb
 C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\bolckFrame3.xnb
 C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\bolckFrame4.xnb
+C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\galleryFont.xnb
+C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\goombaDie0.xnb
+C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\goombaDie1.xnb
+C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\goombaDie2.xnb
+C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\goombaDie3.xnb
+C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\goombaMove0.xnb
+C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\goombaMove1.xnb
+C:\Users\RODRIGO.DCSTL\Documents\GitHub\tutoMonogame\moveSprite\moveSprite\bin\Debug\netcoreapp3.1\Content\gameOver.xnb

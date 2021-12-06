@@ -20,6 +20,14 @@
     <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/bolckFrame2.png</File>
     <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/bolckFrame3.png</File>
     <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/bolckFrame4.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/galleryFont.spritefont</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/gameOver.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/goombaDie0.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/goombaDie1.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/goombaDie2.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/goombaDie3.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/goombaMove0.png</File>
+    <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/goombaMove1.png</File>
     <File>C:/Users/RODRIGO.DCSTL/Documents/GitHub/tutoMonogame/moveSprite/moveSprite/Content/questionBlock.png</File>
   </SourceFiles>
   <DestFiles>
@@ -34,6 +42,14 @@
     <File>idleMarioRight.png</File>
     <File>jumpMarioLeft.png</File>
     <File>jumpMarioRight.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
