@@ -176,13 +176,13 @@ namespace moveSprite
             /*Tutorial*/
             _spriteBatch.Draw(animationBlock[block], postionBlock, null, Color.White, 0f, Vector2.Zero, 3f, SpriteEffects.None, 0f);//affichage du block
             /**********/
-            /*
+           
             //si gameover = true on affiche l'image de fin
             if (isGameOver)
             {
                 _spriteBatch.Draw(textureGameOver, positionGameOver, null, Color.White, 0f, Vector2.Zero, 8f, SpriteEffects.None, 0f);//affichage de l'image de fin
             }
-            */
+           
             _spriteBatch.DrawString(font1, "NB Pieces: " + nbPiece, positionPhrase, Color.White, 0, Vector2.Zero, 1.0f, SpriteEffects.None, 0.5f);//affichage du compter de pieces
 
             _spriteBatch.End();
