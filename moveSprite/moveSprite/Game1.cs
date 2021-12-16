@@ -1,15 +1,16 @@
 ﻿/**
- * Nom, Prenom:
- * Projet:
- * Description:
- * Date:
- * Version:
+ * Nom, Prenom: De Castilho E Sousa Rodrigo, Peon Gregoire
+ * Projet:      tuto monogame
+ * Description: faire un tuto monogame pour les premieres annees 
+ * Date:        09/12/2021
+ * Version:     1.0.0.0
  */
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+
 
 namespace moveSprite
 {
@@ -23,27 +24,30 @@ namespace moveSprite
         private Vector2 positionMario;
 
         private Texture2D background;
-        
-        private Texture2D blockQuestion;
-        private Vector2 postionBlock;
-        
+                
         private Texture2D textureGoomba;
         private Vector2 positionGoomba;
 
         private Texture2D textureGameOver;
         private Vector2 positionGameOver;
 
+        /*Tutorial*/
+        private Texture2D blockQuestion;
+        private Vector2 postionBlock;
+        /**********/
+
         private SpriteFont font1;
         private Vector2 positionPhrase;
 
         //les frames de chaque objet
-        private int jump = 0;
+        private int frameJumpMario = 0;
         private int frameGoomba = 0;
-        private int colisionBlock = 0;
-        private int direction = 0;
-       
-        Random rnd = new Random();//creation du random
+        private int frameBlock = 0;
+        private int frameRunMario = 0;
 
+        /*Tutorial*/
+        Random rnd = new Random();//creation du random
+        /**********/
 
         private int nbPiece = 0;//variable pour stocker le nombre de pieces qu'on a
         private bool isLeftGoomba = true; //si = true il va a gauche, si = false il va a droite
@@ -61,6 +65,7 @@ namespace moveSprite
 
         Dictionary<string, Texture2D> animationGoomba = new Dictionary<string, Texture2D>();
 
+        //constructeur 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -68,6 +73,7 @@ namespace moveSprite
             IsMouseVisible = false;
         }
 
+        //on appele juste une fois quand le jeu commence
         protected override void Initialize()
         {
             Window.IsBorderless = true;
@@ -79,8 +85,7 @@ namespace moveSprite
             base.Initialize();
         }
 
-
-
+        //on appele juste une fois quand le jeu commence
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -97,7 +102,7 @@ namespace moveSprite
             animationMario.Add("jumpMarioLeft", Content.Load<Texture2D>("jumpMarioLeft"));
             animationMario.Add("jumpMarioRight", Content.Load<Texture2D>("jumpMarioRight"));
 
-            //dictionnaire pour le goomba
+            //dictionnaire pour le Goomba
             animationGoomba.Add("goombaMove0", Content.Load<Texture2D>("goombaMove0"));
             animationGoomba.Add("goombaMove1", Content.Load<Texture2D>("goombaMove1"));
             animationGoomba.Add("goombaDie0", Content.Load<Texture2D>("goombaDie0"));
@@ -105,7 +110,7 @@ namespace moveSprite
             animationGoomba.Add("goombaDie2", Content.Load<Texture2D>("goombaDie2"));
             animationGoomba.Add("goombaDie3", Content.Load<Texture2D>("goombaDie3"));
 
-            //dictionnaire pour le block
+            //dictionnaire pour le Block
             animationBlock.Add("questionBlock", Content.Load<Texture2D>("questionBlock"));
             animationBlock.Add("blockFrame0", Content.Load<Texture2D>("bolckFrame0"));
             animationBlock.Add("blockFrame1", Content.Load<Texture2D>("bolckFrame1"));
@@ -121,17 +126,21 @@ namespace moveSprite
 
             textureGoomba = Content.Load<Texture2D>("goombaMove0");
             positionGoomba = new Vector2(1000, 902);
-            
+
+            /*Tutorial*/
             blockQuestion = Content.Load<Texture2D>("questionBlock");
             postionBlock = new Vector2(700, 720);
-            
+            /**********/
+
             SpriteBatch phrase = new SpriteBatch(GraphicsDevice);
             font1 = Content.Load<SpriteFont>("galleryFont");
-            positionPhrase = new Vector2(20,50);
+            positionPhrase = new Vector2(20, 50);
 
             textureGameOver = Content.Load<Texture2D>("gameOver");
             positionGameOver = new Vector2(0, -70);
         }
+
+        //cette fonction va etre appele plusieurs fois par seconde pour changer la valeur des variables
         protected override void Update(GameTime gameTime)
         {
             /*Movemment Mario*/
@@ -144,13 +153,14 @@ namespace moveSprite
             GoombaMovement();
 
             //si on touche le goomba on perd
-            if (positionMario.X+textureMario.Width*4f > positionGoomba.X && positionMario.X < positionGoomba.X + textureGoomba.Width && (positionMario.Y + textureMario.Height*4f) >= positionGoomba.Y)
+            if (positionMario.X + textureMario.Width * 4f > positionGoomba.X && positionMario.X < positionGoomba.X + textureGoomba.Width && (positionMario.Y + textureMario.Height * 4f) >= positionGoomba.Y)
             {
                 isGameOver = true;//la variable devine true
             }
             base.Update(gameTime);
         }
 
+        //on appelel plusieurs fois par seconde comme la methode Update
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
@@ -162,16 +172,18 @@ namespace moveSprite
             _spriteBatch.Draw(animationMario[movementMario], positionMario, null, Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 0f);//affichage du mario
 
             _spriteBatch.Draw(animationGoomba[movementGoomba], positionGoomba, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);//affichage du enemie
-           
-            _spriteBatch.Draw(animationBlock[block], postionBlock, null, Color.White, 0f, Vector2.Zero, 3f, SpriteEffects.None, 0f);//affichage du block
             
+            /*Tutorial*/
+            _spriteBatch.Draw(animationBlock[block], postionBlock, null, Color.White, 0f, Vector2.Zero, 3f, SpriteEffects.None, 0f);//affichage du block
+            /**********/
+            /*
             //si gameover = true on affiche l'image de fin
             if (isGameOver)
             {
                 _spriteBatch.Draw(textureGameOver, positionGameOver, null, Color.White, 0f, Vector2.Zero, 8f, SpriteEffects.None, 0f);//affichage de l'image de fin
             }
-
-            _spriteBatch.DrawString(font1, "NB Pieces: " + nbPiece, positionPhrase, Color.White, 0,Vector2.Zero, 1.0f, SpriteEffects.None, 0.5f);//affichage du compter de pieces
+            */
+            _spriteBatch.DrawString(font1, "NB Pieces: " + nbPiece, positionPhrase, Color.White, 0, Vector2.Zero, 1.0f, SpriteEffects.None, 0.5f);//affichage du compter de pieces
 
             _spriteBatch.End();
 
@@ -234,40 +246,42 @@ namespace moveSprite
         private void BlockAnimations()
         {
             //si on touche le block on fait l'animation et on gagne 1 piece
-            if (colisionBlock > 0)
+            if (frameBlock > 0)
             {
                 //animation du block
-                if (colisionBlock < 7 && colisionBlock > 0)
+                if (frameBlock < 7 && frameBlock > 0)
                 {
                     block = "blockFrame0";
-                    colisionBlock += 1;
+                    frameBlock += 1;
                 }
-                else if (colisionBlock < 14 && colisionBlock > 0)
+                else if (frameBlock < 14 && frameBlock > 0)
                 {
                     block = "blockFrame1";
-                    colisionBlock += 1;
+                    frameBlock += 1;
                 }
-                else if (colisionBlock < 21 && colisionBlock > 0)
+                else if (frameBlock < 21 && frameBlock > 0)
                 {
                     block = "blockFrame2";
-                    colisionBlock += 1;
+                    frameBlock += 1;
                 }
-                else if (colisionBlock < 28 && colisionBlock > 0)
+                else if (frameBlock < 28 && frameBlock > 0)
                 {
                     block = "blockFrame3";
-                    colisionBlock += 1;
+                    frameBlock += 1;
                 }
-                else if (colisionBlock < 35 && colisionBlock > 0)
+                else if (frameBlock < 35 && frameBlock > 0)
                 {
                     block = "blockFrame4";
-                    colisionBlock += 1;
+                    frameBlock += 1;
                 }
-                else if (colisionBlock < 42 && colisionBlock > 0)
+                else if (frameBlock < 42 && frameBlock > 0)
                 {
                     block = "questionBlock";
-                    colisionBlock = 0;
+                    frameBlock = 0;
                     nbPiece += 1;//a chaque fois qu'on touche le block on gagne une piece en plus
+                    /*tutorial*/
                     postionBlock.X = rnd.Next(0, (_graphics.PreferredBackBufferWidth - (blockQuestion.Width * 2)));//random pour changer la position du block
+                    /**********/
                 }
             }
         }
@@ -276,20 +290,20 @@ namespace moveSprite
         private void MarioMovement()
         {
             ////si on presse la touche W le mario va se sauter
-            if (Keyboard.GetState().IsKeyDown(Keys.W) || jump > 0)
+            if (Keyboard.GetState().IsKeyDown(Keys.W) || frameJumpMario > 0)
             {
                 //a la fin du saut on va vérifier si Mario a toucher le block
-                if (jump == 21)
+                if (frameJumpMario == 21)
                 {   //sauvor si on a toucher le block
                     if (positionMario.X > (postionBlock.X - 10) && positionMario.X < (postionBlock.X + 10 + blockQuestion.Width))
                     {
-                        colisionBlock = 1;
+                        frameBlock = 1;
                     }
                 }
                 //verifier si on a toucher le block et faire son animation
 
                 //animation de saut et le temps de saut
-                if (jump < 21)
+                if (frameJumpMario < 21)
                 {
                     if (movementMario == "idleMarioLeft")
                     {
@@ -300,7 +314,7 @@ namespace moveSprite
                         movementMario = "jumpMarioRight";
                     }
                     positionMario.Y -= 4;
-                    jump += 1;
+                    frameJumpMario += 1;
                     //on tourne mario si on touche sur A ou D
                     if (Keyboard.GetState().IsKeyDown(Keys.A) && positionMario.X != 0)
                     {
@@ -316,10 +330,10 @@ namespace moveSprite
                     }
                 }
                 //animation pour descendre
-                else if (jump < 42 && jump > 0)
+                else if (frameJumpMario < 42 && frameJumpMario > 0)
                 {
                     positionMario.Y += 4;
-                    jump += 1;
+                    frameJumpMario += 1;
                     //on tourne mario si on touche sur A ou D
                     if (Keyboard.GetState().IsKeyDown(Keys.A) && positionMario.X != 0)
                     {
@@ -334,7 +348,7 @@ namespace moveSprite
                 }
                 else
                 {
-                    jump = 0;
+                    frameJumpMario = 0;
                     //aterrisage mario reprend le statu "idle"
                     if (movementMario == "jumpMarioLeft")
                     {
@@ -350,48 +364,48 @@ namespace moveSprite
             else if (Keyboard.GetState().IsKeyDown(Keys.A) && positionMario.X != 0)
             {
                 positionMario.X -= 5;
-                if (direction < 10)
+                if (frameRunMario < 10)
                 {
                     movementMario = "frame0Left";
-                    direction += 1;
+                    frameRunMario += 1;
                 }
-                else if (direction < 20)
+                else if (frameRunMario < 20)
                 {
                     movementMario = "frame1Left";
-                    direction += 1;
+                    frameRunMario += 1;
                 }
-                else if (direction < 32)
+                else if (frameRunMario < 32)
                 {
                     movementMario = "frame2Left";
-                    direction += 1;
+                    frameRunMario += 1;
                 }
-                else if (direction > 20)
+                else if (frameRunMario > 20)
                 {
-                    direction = 0;
+                    frameRunMario = 0;
                 }
             }
             //si on presse la touche D le mario va se deplacer vers la droite
             else if (Keyboard.GetState().IsKeyDown(Keys.D) && positionMario.X < _graphics.PreferredBackBufferWidth - (textureMario.Width * 4))
             {
                 positionMario.X += 5;
-                if (direction < 10)
+                if (frameRunMario < 10)
                 {
                     movementMario = "frame0Right";
-                    direction += 1;
+                    frameRunMario += 1;
                 }
-                else if (direction < 20)
+                else if (frameRunMario < 20)
                 {
                     movementMario = "frame1Right";
-                    direction += 1;
+                    frameRunMario += 1;
                 }
-                else if (direction < 32)
+                else if (frameRunMario < 32)
                 {
                     movementMario = "frame2Right";
-                    direction += 1;
+                    frameRunMario += 1;
                 }
-                else if (direction > 20)
+                else if (frameRunMario > 20)
                 {
-                    direction = 0;
+                    frameRunMario = 0;
                 }
             }
         }
