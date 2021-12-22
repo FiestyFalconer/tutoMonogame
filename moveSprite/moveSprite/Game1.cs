@@ -31,7 +31,8 @@ namespace moveSprite
         private Texture2D textureGameOver;
         private Vector2 positionGameOver;
 
-        /*Tutorial*/
+        /*Tutoriel*/
+        /*Creation des varialbes de texture et position*/
         private Texture2D blockQuestion;
         private Vector2 postionBlock;
         /**********/
@@ -44,8 +45,9 @@ namespace moveSprite
         private int frameGoomba = 0;
         private int frameBlock = 0;
         private int frameRunMario = 0;
-
-        /*Tutorial*/
+        
+        /*Tutoriel*/
+        /*Creation d'un random*/
         Random rnd = new Random();//creation du random
         /**********/
 
@@ -127,7 +129,8 @@ namespace moveSprite
             textureGoomba = Content.Load<Texture2D>("goombaMove0");
             positionGoomba = new Vector2(1000, 902);
 
-            /*Tutorial*/
+            /*Tutoriel*/
+            /*Donner une texture et une position au block*/
             blockQuestion = Content.Load<Texture2D>("questionBlock");
             postionBlock = new Vector2(700, 720);
             /**********/
@@ -173,7 +176,8 @@ namespace moveSprite
 
             _spriteBatch.Draw(animationGoomba[movementGoomba], positionGoomba, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);//affichage du enemie
             
-            /*Tutorial*/
+            /*Tutoriel*/
+            /*Dessiner la texture dans la fenetre*/
             _spriteBatch.Draw(animationBlock[block], postionBlock, null, Color.White, 0f, Vector2.Zero, 3f, SpriteEffects.None, 0f);//affichage du block
             /**********/
            
@@ -280,6 +284,7 @@ namespace moveSprite
                     frameBlock = 0;
                     nbPiece += 1;//a chaque fois qu'on touche le block on gagne une piece en plus
                     /*tutorial*/
+                    /*Random pour changer la postion du block*/
                     postionBlock.X = rnd.Next(0, (_graphics.PreferredBackBufferWidth - (blockQuestion.Width * 2)));//random pour changer la position du block
                     /**********/
                 }
