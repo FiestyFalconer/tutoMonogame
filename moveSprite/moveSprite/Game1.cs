@@ -92,33 +92,25 @@ namespace moveSprite
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //dictionnaire pour le Mario
-            animationMario.Add("idleMarioLeft", Content.Load<Texture2D>("idleMarioLeft"));
-            animationMario.Add("idleMarioRight", Content.Load<Texture2D>("idleMarioRight"));
-            animationMario.Add("frame0Right", Content.Load<Texture2D>("frame0Right"));
-            animationMario.Add("frame0Left", Content.Load<Texture2D>("frame0Left"));
-            animationMario.Add("frame1Left", Content.Load<Texture2D>("frame1Left"));
-            animationMario.Add("frame1Right", Content.Load<Texture2D>("frame1Right"));
-            animationMario.Add("frame2Right", Content.Load<Texture2D>("frame2Right"));
-            animationMario.Add("frame2Left", Content.Load<Texture2D>("frame2Left"));
-            animationMario.Add("jumpMarioLeft", Content.Load<Texture2D>("jumpMarioLeft"));
-            animationMario.Add("jumpMarioRight", Content.Load<Texture2D>("jumpMarioRight"));
+            //tableau avec chaque nom de sprite de chaque objet
+            string[] tableauAnimMario = { "idleMarioLeft", "idleMarioRight", "frame0Right", "frame0Left", "frame1Left", "frame1Right", "frame2Right", "frame2Left", "jumpMarioLeft", "jumpMarioRight"};
+            string[] tableauAnimGoomba = {"goombaMove0", "goombaMove1"};
+            string[] tableauAnimBlock = {"questionBlock", "bolckFrame0", "bolckFrame1", "bolckFrame2", "bolckFrame3", "bolckFrame4"};
 
-            //dictionnaire pour le Goomba
-            animationGoomba.Add("goombaMove0", Content.Load<Texture2D>("goombaMove0"));
-            animationGoomba.Add("goombaMove1", Content.Load<Texture2D>("goombaMove1"));
-            animationGoomba.Add("goombaDie0", Content.Load<Texture2D>("goombaDie0"));
-            animationGoomba.Add("goombaDie1", Content.Load<Texture2D>("goombaDie1"));
-            animationGoomba.Add("goombaDie2", Content.Load<Texture2D>("goombaDie2"));
-            animationGoomba.Add("goombaDie3", Content.Load<Texture2D>("goombaDie3"));
+            //mettre chaque sprite dans le dictionnaire
+            foreach (string sprite in tableauAnimMario)
+            {
+                animationMario.Add(sprite, Content.Load<Texture2D>(sprite));
+            }
+            foreach (string sprite in tableauAnimGoomba)
+            {
+                animationGoomba.Add(sprite, Content.Load<Texture2D>(sprite));
+            }
+            foreach (string sprite in tableauAnimBlock)
+            {
+                animationBlock.Add(sprite, Content.Load<Texture2D>(sprite));
+            }
 
-            //dictionnaire pour le Block
-            animationBlock.Add("questionBlock", Content.Load<Texture2D>("questionBlock"));
-            animationBlock.Add("blockFrame0", Content.Load<Texture2D>("bolckFrame0"));
-            animationBlock.Add("blockFrame1", Content.Load<Texture2D>("bolckFrame1"));
-            animationBlock.Add("blockFrame2", Content.Load<Texture2D>("bolckFrame2"));
-            animationBlock.Add("blockFrame3", Content.Load<Texture2D>("bolckFrame3"));
-            animationBlock.Add("blockFrame4", Content.Load<Texture2D>("bolckFrame4"));
             //le sprite et la position de chaque objet
             background = Content.Load<Texture2D>("background");
 
@@ -255,27 +247,27 @@ namespace moveSprite
                 //animation du block
                 if (frameBlock < 7 && frameBlock > 0)
                 {
-                    block = "blockFrame0";
+                    block = "bolckFrame0";
                     frameBlock += 1;
                 }
                 else if (frameBlock < 14 && frameBlock > 0)
                 {
-                    block = "blockFrame1";
+                    block = "bolckFrame1";
                     frameBlock += 1;
                 }
                 else if (frameBlock < 21 && frameBlock > 0)
                 {
-                    block = "blockFrame2";
+                    block = "bolckFrame2";
                     frameBlock += 1;
                 }
                 else if (frameBlock < 28 && frameBlock > 0)
                 {
-                    block = "blockFrame3";
+                    block = "bolckFrame3";
                     frameBlock += 1;
                 }
                 else if (frameBlock < 35 && frameBlock > 0)
                 {
-                    block = "blockFrame4";
+                    block = "bolckFrame4";
                     frameBlock += 1;
                 }
                 else if (frameBlock < 42 && frameBlock > 0)
